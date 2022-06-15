@@ -2,19 +2,19 @@ apiVersion : apps/v1
 kind: Deployment
 metadata:
   name: "coolapi-deployment"
-  namespace: coolapi
+  namespace: jtyrcoolapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: "coolapi"
+      app: "jtyrcoolapi"
   template:
     metadata:
       labels:
-        app: "coolapi"
+        app: "jtyrcoolapi"
     spec:
       containers:
-        - name: "coolapi"
-          image: "acrpierrc007.azurecr.io/coolapi:1.0.0"
+        - name: "jtyrcoolapi"
+          image: "jtyacrstan2022.azurecr.io/jtyrcoolapi:1.0.0"
           ports:
           - containerPort: 3000
