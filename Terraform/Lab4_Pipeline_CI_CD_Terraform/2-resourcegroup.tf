@@ -29,3 +29,4 @@ resource "azurerm_service_plan" "example" {
   os_type             = "Linux"
   sku_name            = "P1v2"
 }
+
