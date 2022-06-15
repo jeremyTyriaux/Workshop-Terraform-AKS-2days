@@ -12,3 +12,20 @@ resource "azurerm_resource_group" "Terra_tfbackend_rg" {
   name     = var.resourceGroupName
   location = var.azureRegion
 }
+
+provider "azurerm" {
+  features {}
+}
+
+resource "azurerm_resource_group" "example" {
+  name     = "jtyr-new-rg"
+  location = "West Europe"
+}
+
+resource "azurerm_service_plan" "example" {
+  name                = "jtyr-serviceplan"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+  os_type             = "Linux"
+  sku_name            = "P1v2"
+}
