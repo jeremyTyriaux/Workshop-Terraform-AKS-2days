@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: "coolapi-service"
-    namespace: coolapi
+    name: "jtyrcoolapi-service"
+    namespace: jtyrcoolapi
     labels:
-        app: "coolapi"
+        app: "jtyrcoolapi"
 spec:
     type: LoadBalancer
     ports:
@@ -13,4 +13,4 @@ spec:
       protocol: TCP
       name: http
     selector:
-        app: "coolapi"
+        app: "jtyrcoolapi"
